@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <div id="#app">
+      <table>
+        <thead></thead>
+        <tbody></tbody>
+        <tfoot></tfoot>
+      </table>
+    </div>
+    <script>
+      bills = [
+        {
+          stt: "STT",
+          name: "Tên",
+          total: "Mức đóng góp",
+          comment: "Nhận xét",
+        },
+        {
+          stt: 1,
+          name: "Giang Hồng Sơn",
+          total: 1000000,
+          comment: " Sugar Daddy",
+        },
+        {
+          stt: 2,
+          name: "Nguyễn Thế Anh",
+          total: 200000,
+          comment: " Sugar Brother",
+        },
+        {
+          stt: 3,
+          name: "Bùi Lan Nhi",
+          total: 100000,
+          comment: " Định mời Nhi ăn tối hóa ra laị thành bữa tối của Nhi :(",
+        },
+        {
+          stt: 4,
+          name: "Nguyễn Hữu Hà",
+          total: 150000,
+          comment: " Tuổi trẻ tài cao :D",
+        },
+        {
+          stt: 5,
+          name: "Phạm Hồng Anh",
+          total: 100000,
+          comment: "Lúc đầu gáy to, về sau hơi rén",
+        },
+        {
+          stt: 6,
+          name: "Nguyễn Văn Hùng",
+          total: 100000,
+          comment: "Bị buồn =]]",
+        },
+        {
+          stt: 7,
+          name: "Nguyễn Văn Tùng",
+          total: 200000,
+          comment: " Kèo nào cũng cân",
+        },
+        {
+          stt: 8,
+          name: "Bùi Minh Đức",
+          total: 100000,
+          comment: "Hơi rén, về sau mạnh dạn hơn :D",
+        },
+        {
+          stt: 9,
+          name: "Dương Đức Thịnh",
+          total: 100000,
+          comment: "Mồm to húp hết nửa bill @@",
+        },
+        {
+          stt: 10,
+          name: "Thầy Giáo Barr",
+          total: 100000,
+          comment: "Cám ơn Nhi đã mời mình :)",
+        },
+      ];
+      function getBill(bills) {
+        const body = document.querySelector("tbody");
+        const table = bills.map(function (bill) {
+          return `
+          <tr>
+            <td>${bill.stt}</td>
+            <td>${bill.name}</td>
+            <td>${bill.total}</td>
+            <td>${bill.comment}</td>
+          <tr>
+        `;
+        });
+        body.append(table);
+        body.innerHTML = table.join("");
+      }
+
+      getBill(bills);
+    </script>
+  </body>
+</html>
