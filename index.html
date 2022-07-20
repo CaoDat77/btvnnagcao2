@@ -5,10 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <div id="#app">
+      <h2></h2>
       <table>
         <thead></thead>
         <tbody></tbody>
@@ -16,6 +17,9 @@
       </table>
     </div>
     <script>
+      const h2 = document.querySelector("h2");
+      h2.textContent = " HÓA ĐƠN ĂN NHẬU";
+
       bills = [
         {
           stt: "STT",
@@ -99,7 +103,6 @@
         body.append(table);
         body.innerHTML = table.join("");
       }
-
       getBill(bills);
     </script>
   </body>
